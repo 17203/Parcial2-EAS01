@@ -25,10 +25,10 @@ int main()
     int z =0;
     int g = 0;
     Jugador p1;
-    p1.HP=50;
+    p1.HP=20;
     p1.DP=4;
     p1.playerName = "Juanete";
-    Jugador p2= {20,7,"pedrete"};
+    Jugador p2= {50,7,"pedrete"};
 
 
     while (p1.HP >0 && p2.HP>0){
@@ -73,6 +73,7 @@ void Jugador::atacar(Jugador p){
     } else {
     cout<< playerName << " recibio " << p.DP << " puntos de danio infligido por " << p.playerName <<endl;
     HP = HP - p.DP;
+    ultimo = p.playerName;
     }
     /*
         El jugador atacado(el que recibes como parámetro) pierde HP igual al ataque del jugador que ataca.
